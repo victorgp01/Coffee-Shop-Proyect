@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-c8sled2e3e2*3q80ox-dgxmeu$iu-ns20f7j#)zij!9279=l=%
 DEBUG = True
 
 ALLOWED_HOSTS = []
-
+import os
 
 # Application definition
 
@@ -55,7 +55,8 @@ ROOT_URLCONF = 'coffee_shop.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+            os.path.join(BASE_DIR,'templates') ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
